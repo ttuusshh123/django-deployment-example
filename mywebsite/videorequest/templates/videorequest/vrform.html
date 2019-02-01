@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>enter video title and it's description</h1>
+    <form action="{% url 'vrform' %}" method="POST">
+      {% csrf_token %}
+      videotitle:<br>
+      {{form.videoname}}
+  videodescription<br>
+  {{form.videodesc}}
+  <br>
+  <input type="submit" name="" value="submit">
+</form>
+  </body>
+</html>
